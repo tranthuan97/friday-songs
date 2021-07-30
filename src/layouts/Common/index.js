@@ -58,6 +58,7 @@ const CommonLayout = ({ props }) => {
                     </SubMenu>
                     <Menu.Item key="9" icon={<FileOutlined />}>
                         Files
+                        test
                     </Menu.Item>
                 </Menu>
             </Sider>
