@@ -1,11 +1,16 @@
 import React from 'react';
-import { Layout, Menu, Breadcrumb } from 'antd';
+import { Layout, Input, Menu} from 'antd';
 import {
-    DesktopOutlined,
-    PieChartOutlined,
-    FileOutlined,
-    TeamOutlined,
+    FireOutlined,
+    PartitionOutlined,
+    CrownOutlined,
+    SearchOutlined,
     UserOutlined,
+    StarOutlined,
+    RightOutlined,
+    LeftOutlined,
+    GlobalOutlined,
+    ThunderboltOutlined,
 } from '@ant-design/icons';
 import publicRoutes from '../../routes/publicRoutes';
 import { Redirect, Route, Switch } from 'react-router-dom';
@@ -14,20 +19,28 @@ import styles from './styles.module.css'
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
 
+const CustomTrigger = ({ collapsed }) => {
+    return <div style={{ background: 'white'}}>
+        {
+            collapsed ?
+                <RightOutlined style={{ fontSize: 20, color: '#002140' }} /> :
+                <LeftOutlined style={{ fontSize: 20, color: '#002140' }} />
+        }
+    </div>
+}
+
 const CommonLayout = ({ props }) => {
     const [state, setState] = React.useState({
         collapsed: false,
     })
 
     const onCollapse = collapsed => {
-        console.log(collapsed);
         setState({ collapsed });
     };
 
     const getRoutes = (routes) => {
         return routes.map((prop, key) => {
             if (prop.layout === '/common') {
-                console.log(prop)
                 return <Route path={prop.path} component={prop.component} key={key} />;
             } else {
                 return null;
@@ -35,47 +48,55 @@ const CommonLayout = ({ props }) => {
         });
     };
 
+
+
+    const onSearch = event => console.log(event.target.value);
+
     const { collapsed } = state;
     return (
         <Layout style={{ minHeight: '100vh' }}>
-            <Sider collapsible collapsed={collapsed} onCollapse={onCollapse}>
-                <div className={styles.logo} />
-                <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
-                    <Menu.Item key="1" icon={<PieChartOutlined />}>
-                        Option 1
+            <Sider style={{ background: '#fff' }}
+                trigger={<CustomTrigger collapsed={collapsed} />}
+                collapsible
+                collapsed={collapsed}
+                onCollapse={onCollapse}>
+                <div className={styles.logo} >
+                    My Songs
+                </div>
+                <Menu theme="light" defaultSelectedKeys={['2']} mode="inline">
+                    <Menu.Item key="1" icon={<UserOutlined />}>
+                        Cá nhân
                     </Menu.Item>
-                    <Menu.Item key="2" icon={<DesktopOutlined />}>
-                        Option 2
+                    <Menu.Item key="2" icon={<FireOutlined />}>
+                        Khám phá
                     </Menu.Item>
-                    <SubMenu key="sub1" icon={<UserOutlined />} title="User">
-                        <Menu.Item key="3">Tom</Menu.Item>
-                        <Menu.Item key="4">Bill</Menu.Item>
-                        <Menu.Item key="5">Alex</Menu.Item>
+                    <Menu.Item key="3" icon={<CrownOutlined />}>
+                        Xếp hạng
+                    </Menu.Item>
+                    <SubMenu key="sub1" icon={<PartitionOutlined />} title="Thể loại">
+                        <Menu.Item icon={<StarOutlined />} key="4">Việt Nam</Menu.Item>
+                        <Menu.Item icon={<ThunderboltOutlined />} key="5">US-UK</Menu.Item>
+                        <Menu.Item icon={<GlobalOutlined />} key="6">Khác</Menu.Item>
                     </SubMenu>
-                    <SubMenu key="sub2" icon={<TeamOutlined />} title="Team">
-                        <Menu.Item key="6">Team 1</Menu.Item>
-                        <Menu.Item key="8">Team 2</Menu.Item>
-                    </SubMenu>
-                    <Menu.Item key="9" icon={<FileOutlined />}>
-                        Files
-                        test
-                    </Menu.Item>
                 </Menu>
             </Sider>
             <Layout>
-                <Header className={styles.siteLayoutBackgroundHeader} style={{ padding: 0 }} />
-                <Content style={{ margin: '0 16px' }}>
-                    <Breadcrumb style={{ margin: '16px 0' }}>
-                        <Breadcrumb.Item>User</Breadcrumb.Item>
-                        <Breadcrumb.Item>Bill</Breadcrumb.Item>
-                    </Breadcrumb>
-                    <div className={styles.siteLayoutBackgroundBody} style={{ padding: 24, minHeight: 360 }}>
+                <Header className={styles.siteLayoutBackgroundHeader} style={{ padding: 0, display: 'flex', justifyContent: 'space-between' }} >
+
+                    <Input onChange={onSearch} style={{ maxWidth: 400, height: 40, borderRadius: 50, margin: 'auto 5px' }} placeholder="Nhập tên bài hát, tên nghệ sĩ hoạt MV..." prefix={<SearchOutlined style={{ fontSize: 20 }} />} />
+                    <div className="px-2" style={{ whiteSpace: 'nowrap' }}>
+                        <span>Xin chào, </span>
+                        <span style={{ color: 'blue', display: 'inline-block' }}>Trần Thuận</span>
+                    </div>
+                </Header>
+                <Content>
+                    <div className={styles.siteLayoutBackgroundBody} style={{ paddingInline: 24, minHeight: 360 }}>
                         <Switch>
                             {getRoutes(publicRoutes)}
                         </Switch>
                     </div>
                 </Content>
-                <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+                <Footer style={{ textAlign: 'center' }}>Friday Songs ©2021 Created by TT</Footer>
             </Layout>
         </Layout>
     );

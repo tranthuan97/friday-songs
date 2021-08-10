@@ -1,10 +1,10 @@
-import LandingPage from '../pages/LandingPage'
+import Home from '../pages/Home'
 
 const publicRoutes = [
     {
         path: "/",
         name: "trang chính",
-        component: LandingPage,
+        component: Home,
         layout: "/common",
         exact: true,
     },

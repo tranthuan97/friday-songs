@@ -9,7 +9,8 @@ import audio3 from '../../assets/audio/Thoi-Thanh-Xuan-Se-Qua-Pham-Hong-Phuoc-Va
 import audio4 from '../../assets/audio/GiaiDieuTinhYeu-ThuyChi.mp3'
 import audio5 from '../../assets/audio/ThanhXuan-DaLAB.mp3'
 import audio6 from '../../assets/audio/BaiCaTuoiTre-DaLABLinhCaoMelG.mp3'
-import styles from './styles.module.css';
+// import styles from './styles.module.css';
+import './login.scss';
 
 const arrayMusic = [
     { id: 0, name: 'Mưa Rơi Lặng Thầm', src: audio, singer: 'M4U' },
@@ -124,7 +125,7 @@ export default function Login() {
     const renderListMusic = (item, index) => {
         return (
             <React.Fragment key={item.id}>
-                <div className="my-2 d-flex justify-content-between align-items-center">
+                <div className="my-2 d-flex justify-content-between align-items-center listMusic">
                     <div>
                         <div style={{ fontWeight: 600 }}> {item.name}</div>
                         <small><i>{item.singer}</i></small>
@@ -156,7 +157,7 @@ export default function Login() {
                     }
                 </CardBody>
             </Card>
-            <div className={`mt-3 px-5 text-center ${styles.setWidth}`}>
+            <div className={`mt-3 px-5 text-center setWidth`}>
                 <div>
                     {`Bài hát: ${arrayMusic[state.currentMusic].name} - ${arrayMusic[state.currentMusic].singer}`}
                 </div>
@@ -175,8 +176,8 @@ export default function Login() {
                         <span>{formatCurrentTime}</span>
                         <Slider style={{ height: 2, width: '100%', marginInline: 10 }} onMouseUp={() => console.log(1)} onChange={onChangeRange} type="range" min={0} value={Math.round(state.currentTime)} max={Math.round(state.duration * 100)} />
                         <span>{formatDurationTime}</span>
-                        <i style={{ fontSize: 20 }} className={`fas ${styles.volumeIcon} ${state.volume ? `fa-volume-up` : `fa-volume-down`} ml-3`}></i>
-                        <span className={styles.volumeRange} style={{ position: 'relative', display: 'none' }}>
+                        <i style={{ fontSize: 20 }} className={`fas volumeIcon ${state.volume ? `fa-volume-up` : `fa-volume-down`} ml-3`}></i>
+                        <span className="volumeRange" style={{ position: 'relative', display: 'none' }}>
                             <Slider vertical style={{ zIndex: 9999, height: 50, marginInline: 5, position: 'absolute', bottom: 30, left: -22 }} type="range" onChange={onChangeVolume} min={0} value={state.volume} max={10} />
                             <div style={{ width: 25, height: 25, backgroundColor: '', position: 'absolute', bottom: 11, left: -25 }}></div>
                         </span>
