@@ -55,11 +55,12 @@ const CommonLayout = ({ props }) => {
     const { collapsed } = state;
     return (
         <Layout style={{ minHeight: '100vh' }}>
-            <Sider style={{ background: '#fff' }}
-                trigger={<CustomTrigger collapsed={collapsed} />}
-                collapsible
-                collapsed={collapsed}
-                onCollapse={onCollapse}>
+            <Sider style={{ background: '#fff', borderRight: '1px solid #EAEBEB' }}
+                // trigger={<CustomTrigger collapsed={collapsed} />}
+                // collapsible
+                // collapsed={collapsed}
+                // onCollapse={onCollapse}
+                >
                 <div className={styles.logo} >
                     My Songs
                 </div>

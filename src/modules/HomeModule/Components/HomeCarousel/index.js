@@ -29,7 +29,7 @@ export default function HomeCarousel() {
         data.map((item) => {
           return (
             <div key={item.id}>
-              <img style={{ paddingInline: 10, width: '100%' }} src={item.img} alt="..." />
+              <img style={{ paddingInline: 10, width: '100%', height: '100%' }} src={item.img} alt="..." />
             </div>
           )
         })

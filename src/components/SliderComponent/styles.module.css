@@ -1,0 +1,20 @@
+.nextBtn {
+    color: gray;
+}
+
+.prevBtn {
+    color: gray;
+}
+
+.nextBtn:hover {
+    color: #49ABE2;
+}
+
+.prevBtn:hover {
+    color: #49ABE2;
+}
+
+.textUnderImg:hover {
+    color: #49ABE2;
+    cursor: pointer;
+}

@@ -1,35 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './musicCard.scss'
+import backgroundImage from './background.jpg'
 
 const MusicCard = props => {
   return (
-    <div style={{maxWidth: 300}}>
-      <div className="block">
-        <div className="head">
-          {/* <h2><span>Enjoy</span> The Life</h2>
-          <div className="box">
-            <p>Stay Healthy</p>
-            <p>Stay Happy</p>
-          </div> */}
+    <p className="block" >
+      <img className="bg" style={{ width: '100%', height: '100%' }} src={backgroundImage} alt="..." />
+      <div className="iconBox">
+        {/* <div className="icon">
+             <i className="fas fa-home"></i>
+           </div> */}
+        <div className="icon">
+          <i className="fas fa-link"></i>
         </div>
-        <div className="bg"></div>
-        <div className="iconBox">
-          {/* <div className="icon">
-            <i className="fas fa-home"></i>
-          </div> */}
-          <div className="icon">
-            <i className="fas fa-link"></i>
-          </div>
-          <div className="icon">
-            <i className="fas fa-play"></i>
-          </div>
-          <div className="icon">
-            <i className="fas fa-heart"></i>
-          </div>
+        <div className="icon">
+          <i className="fas fa-play"></i>
+        </div>
+        <div className="icon">
+          <i className="fas fa-heart"></i>
         </div>
       </div>
-    </div>
+    </p>
   );
 };
 
