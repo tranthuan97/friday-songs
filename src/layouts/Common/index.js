@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Input, Menu} from 'antd';
+import { Layout, Input, Menu } from 'antd';
 import {
     FireOutlined,
     PartitionOutlined,
@@ -7,36 +7,36 @@ import {
     SearchOutlined,
     UserOutlined,
     StarOutlined,
-    RightOutlined,
-    LeftOutlined,
+    // RightOutlined,
+    // LeftOutlined,
     GlobalOutlined,
     ThunderboltOutlined,
 } from '@ant-design/icons';
 import publicRoutes from '../../routes/publicRoutes';
-import { Redirect, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import styles from './styles.module.css'
 
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
 
-const CustomTrigger = ({ collapsed }) => {
-    return <div style={{ background: 'white'}}>
-        {
-            collapsed ?
-                <RightOutlined style={{ fontSize: 20, color: '#002140' }} /> :
-                <LeftOutlined style={{ fontSize: 20, color: '#002140' }} />
-        }
-    </div>
-}
+// const CustomTrigger = ({ collapsed }) => {
+//     return <div style={{ background: 'white'}}>
+//         {
+//             collapsed ?
+//                 <RightOutlined style={{ fontSize: 20, color: '#002140' }} /> :
+//                 <LeftOutlined style={{ fontSize: 20, color: '#002140' }} />
+//         }
+//     </div>
+// }
 
 const CommonLayout = ({ props }) => {
-    const [state, setState] = React.useState({
-        collapsed: false,
-    })
+    // const [state, setState] = React.useState({
+    //     collapsed: false,
+    // })
 
-    const onCollapse = collapsed => {
-        setState({ collapsed });
-    };
+    // const onCollapse = collapsed => {
+    //     setState({ collapsed });
+    // };
 
     const getRoutes = (routes) => {
         return routes.map((prop, key) => {
@@ -52,15 +52,15 @@ const CommonLayout = ({ props }) => {
 
     const onSearch = event => console.log(event.target.value);
 
-    const { collapsed } = state;
+    // const { collapsed } = state;
     return (
         <Layout style={{ minHeight: '100vh' }}>
             <Sider style={{ background: '#fff', borderRight: '1px solid #EAEBEB' }}
-                // trigger={<CustomTrigger collapsed={collapsed} />}
-                // collapsible
-                // collapsed={collapsed}
-                // onCollapse={onCollapse}
-                >
+            // trigger={<CustomTrigger collapsed={collapsed} />}
+            // collapsible
+            // collapsed={collapsed}
+            // onCollapse={onCollapse}
+            >
                 <div className={styles.logo} >
                     My Songs
                 </div>

@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './musicCard.scss'
 import backgroundImage from './background.jpg'
 
@@ -23,10 +22,6 @@ const MusicCard = props => {
       </div>
     </p>
   );
-};
-
-MusicCard.propTypes = {
-
 };
 
 export default MusicCard;

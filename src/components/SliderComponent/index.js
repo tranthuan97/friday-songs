@@ -1,11 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Slider from 'react-slick';
 import styles from './styles.module.css'
-import { Tooltip } from 'antd';
 
 const SliderComponent = ({ data, title }) => {
-
 
   const ref = React.useRef()
   const settings = {
@@ -22,7 +19,7 @@ const SliderComponent = ({ data, title }) => {
     arrows: false,
   }
   return (
-    <p style={{ height: '100%' }}>
+    <div className="my-3">
       <div className="d-flex justify-content-between align-items-center mx-2">
         <h4 style={{ fontWeight: 700 }}>{title}</h4>
         <div>
@@ -34,24 +31,18 @@ const SliderComponent = ({ data, title }) => {
         {
           data.map((item) => {
             return (
-              <p key={item.id}>
+              <div key={item.id}>
                 <div style={{ paddingInline: 10 }}>
                   <img style={{ width: '100%', borderRadius: 5 }} src={item.img} alt="..." />
-                  <Tooltip placement="bottomLeft" title={item.name}>
-                  <div className={styles.textUnderImg} style={{ paddingTop: 5, fontWeight: 600, whiteSpace: 'nowrap', textOverflow: 'ellipsis', overflow: 'hidden' }}>{item.name}</div>
-                  </Tooltip>
+                  <div title={item.name} className={styles.textUnderImg} style={{ paddingTop: 5, fontWeight: 600, whiteSpace: 'nowrap', textOverflow: 'ellipsis', overflow: 'hidden' }}>{item.name}</div>
                 </div>
-              </p>
+              </div>
             )
           })
         }
       </Slider>
-    </p>
+    </div>
   );
-};
-
-SliderComponent.propTypes = {
-
 };
 
 export default SliderComponent;

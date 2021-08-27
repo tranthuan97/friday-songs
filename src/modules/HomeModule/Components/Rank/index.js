@@ -1,8 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Button, Col, Row } from 'antd';
 import styles from './styles.module.css';
-import { Container } from 'reactstrap';
 
 const Rank = props => {
   return (
@@ -27,14 +25,23 @@ const Rank = props => {
                     backgroundSize: 'cover',
                     backgroundPosition: 'center center'
                   }}>
-                    <div style={{position: 'absolute', top: 36, left: 24, fontSize: 28, color: 'white'}}>
+                    <div style={{ position: 'absolute', top: 24, left: 24, fontSize: 28, color: 'white' }}>
                       {item.region.toUpperCase()}
+                    </div>
+                    <div className={styles.box1} style={{ borderRadius: 5, position: 'absolute', bottom: '45%', left: 15, height: 80, width: 80, background: 'gray' }}>
+                      <img src="https://avatar-ex-swe.nixcdn.com/song/2021/03/12/e/2/9/e/1615554946033_300.jpg" alt='' style={{ borderRadius: 5, width: '100%', height: '100%' }} />
+                    </div>
+                    <div className={styles.box2} style={{ borderRadius: 5, position: 'absolute', bottom: '45%', left: 60, height: 80, width: 80, background: 'blue' }}>
+                      <img src="https://avatar-ex-swe.nixcdn.com/song/2021/08/02/f/d/b/3/1627913895076_300.jpg" alt='' style={{ borderRadius: 5, width: '100%', height: '100%' }} />
+                    </div>
+                    <div className={styles.box3} style={{ borderRadius: 5, position: 'absolute', bottom: '45%', left: 110, height: 80, width: 80, background: 'green' }}>
+                      <img src="https://avatar-ex-swe.nixcdn.com/song/2021/03/12/e/2/9/e/1615525268442_300.jpg" alt='' style={{ borderRadius: 5, width: '100%', height: '100%' }} />
                     </div>
                   </div>
                   <div style={{ flex: 1 }}>
                     <div className="p-4">
-                      <h5 style={{ fontSize: 16 }}>Thê Lương</h5>
-                      <p style={{ fontSize: 13, color: '#878889' }}>Phúc Chinh</p>
+                      <h5 title="Gặp gỡ, yêu đương và được bên em" style={{ fontSize: 16, whiteSpace: 'nowrap', textOverflow: 'ellipsis', overflow: 'hidden' }}>Gặp gỡ, yêu đương và được bên em</h5>
+                      <p title="Phan Mạnh Quỳnh" style={{ fontSize: 13, color: '#878889', whiteSpace: 'nowrap', textOverflow: 'ellipsis', overflow: 'hidden' }}>Phan Mạnh Quỳnh</p>
                       <Button className={styles.viewAllBtn} style={{ background: '#F2F2F2' }}>Xem tất cả</Button>
                     </div>
                   </div>
@@ -46,10 +53,6 @@ const Rank = props => {
       </Row>
     </div >
   );
-};
-
-Rank.propTypes = {
-
 };
 
 export default Rank;

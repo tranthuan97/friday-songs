@@ -7,7 +7,6 @@ import {
     Nav,
     NavItem,
     NavLink,
-    NavbarText
 } from 'reactstrap';
 
 export default function Header() {
