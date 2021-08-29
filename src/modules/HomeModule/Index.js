@@ -1,6 +1,7 @@
 import React from 'react';
 import SliderComponent from '../../components/SliderComponent';
 import HomeCarousel from './Components/HomeCarousel';
+import NewSongs from './Components/NewSongs';
 import Rank from './Components/Rank';
 
 const data = [
@@ -30,6 +31,9 @@ const HomeIndex = () => {
         />
         <div className="mb-4">
           <Rank />
+        </div>
+        <div className="mb-4">
+          <NewSongs />
         </div>
       </div>
     </div >
