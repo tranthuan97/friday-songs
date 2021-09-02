@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Input, Menu } from 'antd';
+import { Layout, Input, Menu, BackTop } from 'antd';
 import {
     FireOutlined,
     PartitionOutlined,
@@ -99,6 +99,7 @@ const CommonLayout = ({ props }) => {
                 </Content>
                 <Footer style={{ textAlign: 'center' }}>Friday Songs ©2021 Created by TT</Footer>
             </Layout>
+            <BackTop style={{right: 30}}/>
         </Layout>
     );
 }

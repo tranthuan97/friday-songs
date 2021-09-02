@@ -23,11 +23,11 @@ const HomeIndex = () => {
       <div className="mt-5">
         <SliderComponent
           data={data}
-          title={'Nhạc Quốc Tế Mới Cập Nhật'}
+          title={'Nhạc HOT'}
         />
         <SliderComponent
           data={data}
-          title={'Khu Vườn Ngôn Tình'}
+          title="Nhạc Hay Chọn Lọc"
         />
         <div className="mb-4">
           <Rank />
@@ -35,6 +35,14 @@ const HomeIndex = () => {
         <div className="mb-4">
           <NewSongs />
         </div>
+        <SliderComponent
+          data={data}
+          title="Chủ Đề HOT"
+        />
+        <SliderComponent
+          data={data}
+          title="Ca Sĩ Nổi Bật"
+        />
       </div>
     </div >
   );

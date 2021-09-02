@@ -1,0 +1,26 @@
+.song {
+    font-size: 15px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.singers {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden
+}
+
+.song:hover {
+    cursor: pointer;
+    color: #49ABE2;
+}
+
+.singers_singer:hover {
+    color: #49ABE2;
+    cursor: pointer;
+}
+
+.cover:hover{
+    background: #F6F6F6;
+}
