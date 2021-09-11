@@ -2,12 +2,16 @@ import React from 'react';
 import Slider from 'react-slick';
 import styles from './styles.module.css'
 import { AiOutlinePlayCircle } from "react-icons/ai";
+import { useDispatch } from 'react-redux';
 
-const SliderComponent = ({ data, title }) => {
+const SliderComponent = ({ data, title, rounded, contentStyles }) => {
 
   const [state, setState] = React.useState({
     screen: 768
   })
+
+  const dispatch = useDispatch();
+
   const size = React.useRef(768);
   const ref = React.useRef()
 
@@ -42,6 +46,11 @@ const SliderComponent = ({ data, title }) => {
     setState(pre => ({ ...pre, screen: screenWidth }))
   })
 
+  const listenToMusic = (item) => {
+    console.log("🚀 ~ file: index.js ~ line 50 ~ listenToMusic ~ item", item)
+    dispatch({ type: 'LISTEN_SONG', song: item })
+  }
+
   return (
     <div className="my-3">
       <div className="d-flex justify-content-between align-items-center mx-2">
@@ -57,16 +66,15 @@ const SliderComponent = ({ data, title }) => {
             return (
               <div key={item.id}>
                 <div style={{ paddingInline: 10 }}>
-                  <div className={styles.cover}>
-                    <img className={styles.img} src={item.img} alt="..." />
+                  <div className={`${rounded ? 'rounded-circle' : ''} ${styles.cover}`}>
+                    <img className={`${rounded ? 'rounded-circle' : ''}  ${styles.img}`} src={item.img} alt="..." />
                     <div className={styles.box}>
                       <div className={styles.boxContent}>
-                        <AiOutlinePlayCircle className={styles.playBtn} />
-
+                        <AiOutlinePlayCircle onClick={() => listenToMusic(item)} className={styles.playBtn} />
                       </div>
                     </div>
                   </div>
-                  <div title={item.name} className={styles.textUnderImg} style={{ paddingTop: 5, fontWeight: 600, whiteSpace: 'nowrap', textOverflow: 'ellipsis', overflow: 'hidden' }}>{item.name}</div>
+                  <div title={item.name} className={styles.textUnderImg} style={contentStyles}>{item.song}</div>
                 </div>
               </div>
             )

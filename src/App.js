@@ -9,8 +9,8 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/admin" render={(props) => <Admin {...props} />} />
         <Route path="/auth" render={(props) => <Auth {...props} />} />
+        <Route path="/admin" render={(props) => <Admin {...props} />} />
         <Route path="/" render={(props) => <CommonLayout {...props} />} />
         <Redirect from="*" to="/" />
       </Switch>
