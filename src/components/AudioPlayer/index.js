@@ -22,7 +22,7 @@ const arrayMusic = [
   { id: 5, name: 'Bài Ka Tuổi Trẻ', src: audio6, singer: 'DaLAB - Linh Cao - MelG' },
 ];
 
-export default function Login() {
+export default function AudioPlayer() {
   const [state, setState] = React.useState({
     duration: 0,
     isPlay: false,
