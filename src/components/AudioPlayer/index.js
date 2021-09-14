@@ -12,6 +12,7 @@ import audio6 from '../../assets/audio/BaiCaTuoiTre-DaLABLinhCaoMelG.mp3'
 // import styles from './styles.module.css';
 import './login.scss';
 import { useSelector } from 'react-redux';
+import Player from './Player';
 
 const arrayMusic = [
   { id: 0, name: 'Mưa Rơi Lặng Thầm', src: audio, singer: 'M4U' },
@@ -139,39 +140,51 @@ export default function AudioPlayer() {
     return <span key={item.id}>{item.singer}, </span>
   })
 
-  return (
-    <React.Fragment>
-      <div className={`py-3 px-5 text-center setWidth`} style={{ background: '#120C1C' }}>
-        <div style={{ color: 'white' }}>
-          {`Bài hát: ${songData.song} - `}
-          {
-            singers
-          }
-          {/* {`Bài hát: ${arrayMusic[state.currentMusic].name} - ${arrayMusic[state.currentMusic].singer}`} */}
-        </div>
-        <Button style={{ boxShadow: 'none' }} className="mx-1 bg-primary" onClick={() => onChangeMusic('back')}><i className="fas fa-step-backward text-white"></i></Button>
-        <Button style={{ boxShadow: 'none' }} className="mx-1 bg-primary" onClick={() => !state.isPlay ? playAudio() : pauseAudio()}>
-          {!state.isLoading ? state.isPlay ?
-            <i className="fas fa-pause text-white" /> :
-            <i className="fas fa-play text-white" /> :
-            <i className="fa fa-spinner fa-pulse text-white"></i>
-          }
-        </Button>
-        <Button style={{ boxShadow: 'none' }} className="mx-1 bg-primary" onClick={() => onChangeMusic('next')}><i className="fas fa-step-forward text-white"></i></Button>
-        {/* <RetweetOutlined className="ml-2" style={{cursor: 'pointer', fontSize: '30px', color: '#08c' }} /> */}
-        <div className="flex-grow-1 px-2">
-          <div className="d-flex justify-content-between text-primary">
-            <span>{formatCurrentTime}</span>
-            <Slider style={{ height: 2, width: '100%', marginInline: 10 }} onMouseUp={() => console.log(1)} onChange={onChangeRange} type="range" min={0} value={Math.round(state.currentTime)} max={Math.round(state.duration * 100)} />
-            <span>{formatDurationTime}</span>
-            <i style={{ fontSize: 20 }} className={`fas volumeIcon ${state.volume ? `fa-volume-up` : `fa-volume-down`} ml-3`}></i>
-            <span className="volumeRange" style={{ position: 'relative', display: 'none' }}>
-              <Slider vertical style={{ zIndex: 9999, height: 50, marginInline: 5, position: 'absolute', bottom: 30, left: -22 }} type="range" onChange={onChangeVolume} min={0} value={state.volume} max={10} />
-              <div style={{ width: 25, height: 25, backgroundColor: '', position: 'absolute', bottom: 11, left: -25 }}></div>
-            </span>
-          </div>
-        </div>
-      </div>
-    </React.Fragment >
-  );
+  return <Player
+    value={Math.round(state.currentTime)}
+    max={Math.round(state.duration * 100)}
+    current={formatCurrentTime}
+    duration={formatDurationTime}
+    isLoading={state.isLoading}
+    isPlay={state.isPlay}
+    onPlay={!state.isPlay ? playAudio : pauseAudio}
+    onChangeRange={onChangeRange}
+    songData={songData}
+    state={state}
+    onChangeVolume={onChangeVolume}
+  />
+
+  // return (
+  //   <React.Fragment>
+  //     <div className={`py-3 px-5 text-center setWidth`} style={{ background: '#120C1C' }}>
+  //       <div style={{ color: 'white' }}>
+  //         {`Bài hát: ${songData.song} - `}
+  //         {
+  //           singers
+  //         }
+  //       </div>
+  //       <Button style={{ boxShadow: 'none' }} className="mx-1 bg-primary" onClick={() => onChangeMusic('back')}><i className="fas fa-step-backward text-white"></i></Button>
+  //       <Button style={{ boxShadow: 'none' }} className="mx-1 bg-primary" onClick={() => !state.isPlay ? playAudio() : pauseAudio()}>
+  //         {!state.isLoading ? state.isPlay ?
+  //           <i className="fas fa-pause text-white" /> :
+  //           <i className="fas fa-play text-white" /> :
+  //           <i className="fa fa-spinner fa-pulse text-white"></i>
+  //         }
+  //       </Button>
+  //       <Button style={{ boxShadow: 'none' }} className="mx-1 bg-primary" onClick={() => onChangeMusic('next')}><i className="fas fa-step-forward text-white"></i></Button>
+  //       <div className="flex-grow-1 px-2">
+  //         <div className="d-flex justify-content-between text-primary">
+  //           <span>{formatCurrentTime}</span>
+  //           <Slider tipFormatter={null} style={{ height: 2, width: '100%', marginInline: 10 }} onMouseUp={() => console.log(1)} onChange={onChangeRange} type="range" min={0} value={Math.round(state.currentTime)} max={Math.round(state.duration * 100)} />
+  //           <span>{formatDurationTime}</span>
+  //           <i style={{ fontSize: 20 }} className={`fas volumeIcon ${state.volume ? `fa-volume-up` : `fa-volume-down`} ml-3`}></i>
+  //           <span className="volumeRange" style={{ position: 'relative', display: 'none' }}>
+  //             <Slider vertical style={{ zIndex: 9999, height: 50, marginInline: 5, position: 'absolute', bottom: 30, left: -22 }} type="range" onChange={onChangeVolume} min={0} value={state.volume} max={10} />
+  //             <div style={{ width: 25, height: 25, backgroundColor: '', position: 'absolute', bottom: 11, left: -25 }}></div>
+  //           </span>
+  //         </div>
+  //       </div>
+  //     </div>
+  //   </React.Fragment >
+  // );
 };

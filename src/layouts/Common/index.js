@@ -41,11 +41,9 @@ const CommonLayout = ({ props }) => {
 
   React.useEffect(() => {
     if (isOpenModal) {
-      const screenSize = document.querySelector('.affix-bottom')?.clientHeight;
-      setState(pre => ({ ...pre, sizeBottm: screenSize }))
+      setState(pre => ({ ...pre, sizeBottm: 194 }))
     }
   }, [isOpenModal])
-  console.log(state.sizeBottm)
   return (
     <React.Fragment>
       <div className="d-flex">

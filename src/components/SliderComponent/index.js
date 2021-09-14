@@ -47,7 +47,6 @@ const SliderComponent = ({ data, title, rounded, contentStyles }) => {
   })
 
   const listenToMusic = (item) => {
-    console.log("🚀 ~ file: index.js ~ line 50 ~ listenToMusic ~ item", item)
     dispatch({ type: 'LISTEN_SONG', song: item })
   }
 
