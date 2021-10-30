@@ -1,9 +1,6 @@
 import React from 'react'
 import { Route,  Switch, Redirect } from 'react-router-dom'
 
-import Header from '../../components/header'
-import routes from '../../routes';
-
 export default function Auth(props) {
     const getRoutes = (routes) => {
         return routes.map((prop, key) => {
@@ -17,10 +14,9 @@ export default function Auth(props) {
 
     return (
         <div>
-            <Header />
             <Switch>
-                {getRoutes(routes)}
-                <Redirect from='*' to='/auth/login' />
+                {/* {getRoutes(routes)}
+                <Redirect from='*' to='/auth/login' /> */}
             </Switch>
         </div>
     )

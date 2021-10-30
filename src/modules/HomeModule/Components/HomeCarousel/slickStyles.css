@@ -1,8 +1,0 @@
-.slick-prev:before{
-  color: black!important;
-  margin-left: 10px;
-  z-index: 2;
-}
-.slick-next:before {
-  color: black!important;
-}

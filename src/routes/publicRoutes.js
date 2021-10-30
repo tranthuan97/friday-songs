@@ -1,13 +1,13 @@
-import Home from '../pages/Home'
+// import Home from '../pages/Home'
 
-const publicRoutes = [
-    {
-        path: "/",
-        name: "trang chính",
-        component: Home,
-        layout: "/common",
-        exact: true,
-    },
-]
+// const publicRoutes = [
+//     {
+//         path: "/",
+//         name: "trang chính",
+//         component: Home,
+//         layout: "/common",
+//         exact: true,
+//     },
+// ]
 
-export default publicRoutes
+// export default publicRoutes
