@@ -5,7 +5,7 @@ import { Button } from 'antd';
 const SectionCard = ({ img, type, name, price, discount, style, className }) => {
   return (
     <div style={style} className={className}>
-      <img className="mb-2" src={img} alt="img" />
+      <img loading="lazy" className="mb-2" src={img} alt="img" />
       <p><b>{name}</b></p>
       <span style={{ color: 'gray', marginRight: 5 }}>
         {discount ? <del>{price}</del> : price}

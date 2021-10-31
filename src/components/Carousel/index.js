@@ -17,13 +17,13 @@ const CarouselComponent = props => {
   return (
     <Slider {...settings}>
       <div className="d-flex justify-content-center">
-        <img src={`https://cdn.shopify.com/s/files/1/0332/6420/5963/files/Slider1_3350x.jpg?v=1628696569`} alt="img" />
+        <img loading="lazy" src={`https://cdn.shopify.com/s/files/1/0332/6420/5963/files/Slider1_3350x.jpg?v=1628696569`} alt="img" />
       </div>
       <div className="d-flex justify-content-center">
-        <img src={`https://cdn.shopify.com/s/files/1/0332/6420/5963/files/Slider2_3000x.jpg?v=1628696591`} alt="img" />
+        <img loading="lazy" src={`https://cdn.shopify.com/s/files/1/0332/6420/5963/files/Slider2_3000x.jpg?v=1628696591`} alt="img" />
       </div>
       <div className="d-flex justify-content-center">
-        <img src={`https://cdn.shopify.com/s/files/1/0332/6420/5963/files/Slider3_1950x.jpg?v=1628696608`} alt="img" />
+        <img loading="lazy" src={`https://cdn.shopify.com/s/files/1/0332/6420/5963/files/Slider3_1950x.jpg?v=1628696608`} alt="img" />
       </div>
     </Slider>
   );

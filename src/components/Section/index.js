@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import SectionCard from './SectionCard';
-import fakeData from './fakeData';
 
 
-const Section = ({ title, subTitle, style, className }) => {
+const Section = ({ title, subTitle, style, className, items }) => {
   return (
     <div style={style} className={className}>
       <div className="mb-4">
@@ -17,7 +16,7 @@ const Section = ({ title, subTitle, style, className }) => {
       </div>
       <div className="row">
         {
-          fakeData.map(item => {
+          items.map(item => {
             return <div key={item.id} className="col-6 col-md-3 mb-4">
               <SectionCard
                 img={item.img}

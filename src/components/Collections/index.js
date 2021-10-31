@@ -20,8 +20,8 @@ const Collections = ({ style, className }) => {
               style={{ height: '100%', width: '100%' }}
               src="https://cdn.shopify.com/s/files/1/0332/6420/5963/files/bag2_540x.jpg?v=1581730050"
               alt="acessories" />
-            <div className="d-flex justify-content-center align-items-center" style={{ fontWeight: 600, boxShadow: '1px 1px gray', background: 'white', width: 80, height: 40, position: 'absolute', bottom: 0, left: '50%', transform: 'translate(-50%, -50%)' }}>
-              Acessories
+            <div className="d-flex justify-content-center align-items-center" style={{ fontWeight: 600, boxShadow: '1px 1px gray', background: 'white', paddingInline: 10 ,height: 40, position: 'absolute', bottom: 0, left: '50%', transform: 'translate(-50%, -50%)' }}>
+              Accessories
             </div>
           </div>
           <div className="flex-1" style={{ position: 'relative' }}>

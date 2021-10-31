@@ -1,4 +1,4 @@
-const fakeData = [
+const fakeTrendingData = [
   {
     id: 1,
     name: 'Analogue Resin Strap',
@@ -68,4 +68,4 @@ const fakeData = [
   },
 ]
 
-export default fakeData;
+export default fakeTrendingData;

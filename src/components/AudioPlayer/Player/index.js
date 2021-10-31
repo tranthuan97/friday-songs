@@ -10,7 +10,7 @@ const Player = ({ value, max, current, duration, isPlay = false, isLoading, onPl
       <div className="bg-gray-800 rounded-tl-xl sm:rounded-t-xl p-2 pb-6 sm:p-8 lg:p-4 lg:pb-6 xl:p-8 space-y-6 sm:space-y-8 lg:space-y-6 xl:space-y-8">
         <div className="d-flex align-items-center">
           <div className="mr-2 flex items-center space-x-3.5">
-            <img src={songData?.img} alt="" width="160" height="160" className="flex-none w-20 h-20 rounded-lg bg-gray-100" />
+            <img loading="lazy" src={songData?.img} alt="" width="160" height="160" className="flex-none w-20 h-20 rounded-lg bg-gray-100" />
 
           </div>
           <div className="space-y-2 flex-grow-1">
@@ -68,7 +68,7 @@ const Player = ({ value, max, current, duration, isPlay = false, isLoading, onPl
             <circle className="text-gray-500" cx="25" cy="25" r="24" stroke="currentColor" strokeWidth="1.5" />
             <path d="M18 16h4v18h-4V16zM28 16h4v18h-4z" fill="currentColor" />
           </svg> :
-            <img style={{ width: 50, height: 50 }} src={playButton} alt="..." /> :
+            <img loading="lazy" style={{ width: 50, height: 50 }} src={playButton} alt="..." /> :
             <i  className="fa fa-spinner fa-pulse text-white"></i>
           }
         </button>
