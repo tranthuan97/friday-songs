@@ -85,7 +85,7 @@ const FooterComponent = props => {
         </ul>
       </div>
       <BackTop>
-        <Button type="dashed" style={{ position: 'absolute', right: -35, bottom: 5, width: 50, height: 50, borderRadius: 5, background: 'white', textAlign: 'center', lineHeight: '50px', }}>
+        <Button type="dashed" style={{ position: 'absolute', bottom: 35, width: 50, height: 50, borderRadius: 5, background: 'white', textAlign: 'center', lineHeight: '50px', }}>
           <i className="fa fa-angle-up" style={{ fontSize: 25 }} />
         </Button>
       </BackTop>

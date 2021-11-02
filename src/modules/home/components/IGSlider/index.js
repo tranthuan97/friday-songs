@@ -11,8 +11,8 @@ const ArrowButton = ({ icon, isDisable, position, onClick }) => {
       width: 40,
       height: 40,
       position: 'absolute',
-      bottom: '50%',
-      zIndex: 9999,
+      bottom: '40%',
+      zIndex: 5,
       backgroundColor: `rgba(255, 0, 0, ${isDisable ? 0 : 0.2})`
     }}
     type="dashed" shape="circle" >{icon}</Button>
