@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import SectionCard from './SectionCard';
 
 
@@ -8,9 +8,7 @@ const Section = ({ title, subTitle, style, className, items }) => {
     <div style={style} className={className}>
       <div className="mb-4">
         <div className="d-flex justify-content-center">
-          <div style={{ fontWeight: 600 }}>--------</div>
           <h1 style={{ fontWeight: 700, fontSize: 20, textAlign: 'center', marginInline: 10 }}>{title}</h1>
-          <div style={{ fontWeight: 600 }}>--------</div>
         </div>
         <i><p style={{ textAlign: 'center', fontFamily: 'Libre Baskerville', color: 'gray', fontSize: 16, fontWeight: 600 }}>{subTitle}</p></i>
       </div>

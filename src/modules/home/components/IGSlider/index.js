@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import Slider from '@ant-design/react-slick';
 import { Button } from 'antd';
 
@@ -84,7 +84,7 @@ const IGSlider = props => {
   };
   return (
     <div>
-      <div style={{ textAlign: 'center', fontWeight: 700, fontSize: 22 }} className="my-2">----- <i>@</i> FOLLOW US ON INSTAGRAM -----</div>
+      <div style={{ textAlign: 'center', fontWeight: 700, fontSize: 22 }} className="my-2"><i>@</i> FOLLOW US ON INSTAGRAM</div>
       <Slider {...settings}>
         <div>
           <img loading="lazy" style={{ paddingInline: 1 }} src="https://cdn.shopify.com/s/files/1/0332/6420/5963/files/ins1_14_540x.jpg?v=1581782221" alt="img" />
