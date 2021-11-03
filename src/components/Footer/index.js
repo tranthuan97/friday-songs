@@ -13,11 +13,11 @@ const FooterComponent = props => {
             <ul>
               <li style={{ color: 'gray' }} className="my-2">
                 <i className="mx-2 fa fa-map-marker-alt" />
-                Da Nang city, VietNam.
+                Da Nang City, Viet Nam
               </li>
               <li style={{ color: 'gray' }} className="my-2">
                 <i className="mx-2 fa fa-envelope" />
-                tranthuan.ttt @gmail.com
+                tranthuan.ttt@gmail.com
               </li>
               <li style={{ color: 'gray' }} className="my-2">
                 <i className="mx-2 fa fa-phone-alt" />
@@ -35,12 +35,11 @@ const FooterComponent = props => {
           <div className="col-sm-6 col-lg-2 mb-4">
             <h3 style={{ marginBottom: 10, fontSize: 18, fontWeight: 600 }}>Categories</h3>
             <ul>
-              <li style={{ color: 'gray' }} className="my-2">Men</li>
               <li style={{ color: 'gray' }} className="my-2">Women</li>
+              <li style={{ color: 'gray' }} className="my-2">Men</li>
               <li style={{ color: 'gray' }} className="my-2">Accessories</li>
+              <li style={{ color: 'gray' }} className="my-2">Watches</li>
               <li style={{ color: 'gray' }} className="my-2">Shoes</li>
-              <li style={{ color: 'gray' }} className="my-2">Denim</li>
-              <li style={{ color: 'gray' }} className="my-2">Dress</li>
             </ul>
           </div>
           <div className="col-sm-6 col-lg-2 mb-4">
