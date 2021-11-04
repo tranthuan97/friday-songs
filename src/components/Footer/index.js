@@ -38,7 +38,6 @@ const FooterComponent = props => {
               <li style={{ color: 'gray' }} className="my-2">Women</li>
               <li style={{ color: 'gray' }} className="my-2">Men</li>
               <li style={{ color: 'gray' }} className="my-2">Accessories</li>
-              <li style={{ color: 'gray' }} className="my-2">Watches</li>
               <li style={{ color: 'gray' }} className="my-2">Shoes</li>
             </ul>
           </div>

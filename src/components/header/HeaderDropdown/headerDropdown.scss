@@ -1,0 +1,21 @@
+.header-dropdown {
+  width: 950px;
+  background: white;
+  padding: 10px;
+  box-shadow: 0 3px 10px gray;
+  text-align: center;
+}
+
+.header-product{
+  font-weight: 600;
+}
+
+.header-item {
+  color: gray;
+}
+
+@media only screen and (max-width: 900px) {
+  .header-dropdown{
+    width: 770px;
+  }
+}

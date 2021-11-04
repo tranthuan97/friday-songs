@@ -16,13 +16,12 @@ import { Button as BtnAntd, Badge } from 'antd';
 import { SearchOutlined, ShoppingCartOutlined } from '@ant-design/icons';
 import DrawerComponent from '../../DrawerComponent';
 import { Collapse, ListItemButton } from '@mui/material';
-import { AttachMoney, AutoAwesome, ExpandLess, ExpandMore, Favorite, Person, ShoppingBasket, Watch } from '@mui/icons-material';
+import { AttachMoney, AutoAwesome, ExpandLess, ExpandMore, Favorite, Person, ShoppingBasket } from '@mui/icons-material';
 
 const categories = [
   { name: "Women's Clothing", icon: <i className="fas fa-female" style={{ fontSize: 25, paddingLeft: 5 }} /> },
   { name: "Men's Clothing", icon: <i className="fas fa-male" style={{ fontSize: 25, paddingLeft: 5 }} /> },
   { name: "Accessories", icon: <AutoAwesome /> },
-  { name: "Watches", icon: <Watch /> },
   { name: "Shoes", icon: <i className="fas fa-shoe-prints" style={{ fontSize: 20, paddingLeft: 2 }} /> },
 ]
 
@@ -62,7 +61,7 @@ const AppHeader = () => {
           </ListItemButton>
           {
             categories.map(item => (
-              <Collapse key={item} in={open} timeout="auto" unmountOnExit>
+              <Collapse key={item.name} in={open} timeout="auto" unmountOnExit>
                 <List onClick={() => setOpenDrawer(false)} component="div" disablePadding>
                   <ListItemButton sx={{ pl: 4 }}>
                     <ListItemIcon>
