@@ -16,8 +16,8 @@ const SectionCard = ({ img, type, name, price, discount, style, className }) => 
           width: 50,
           height: 50,
           position: 'absolute',
-          top: 20,
-          right: 20,
+          top: 10,
+          right: 15,
           color: type.toLowerCase() === 'new' ? 'blue' : 'red'
         }}>
           {type}

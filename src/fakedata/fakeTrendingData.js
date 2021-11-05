@@ -48,7 +48,7 @@ const fakeTrendingData = [
     img: 'https://cdn.shopify.com/s/files/1/0332/6420/5963/products/p24-11_540x.jpg?v=1581557817',
     actionImg: '',
     discount: '$40.00',
-    type: '-15%'
+    type: '-17%'
   },
   {
     id: 7,

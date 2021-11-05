@@ -31,7 +31,7 @@ const Player = ({ value, max, current, duration, isPlay = false, isLoading, onPl
               </p>
             </div>
             <div className="bg-black rounded-full overflow-hidden">
-              <Slider tipFormatter={null} style={{ height: 2, marginInline: 10 }} onMouseUp={() => console.log(1)} onChange={(e) => onChangeRange(e)} type="range" min={0} value={value} max={max} />
+              <Slider tipFormatter={null} style={{ height: 2, marginInline: 10 }} onChange={(e) => onChangeRange(e)} type="range" min={0} value={value} max={max} />
             </div>
             <div className=" text-gray-400 flex justify-between text-sm font-medium tabular-nums">
               <div>{current}</div>

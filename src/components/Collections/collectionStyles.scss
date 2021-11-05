@@ -1,0 +1,40 @@
+.item1-collection {
+  transition: all 0.6s ease-in-out;
+}
+.item1-collection-cover {
+  overflow: hidden;
+}
+.item2-collection-cover {
+  overflow: hidden;
+}
+.item3-collection-cover {
+  overflow: hidden;
+}
+.item4-collection-cover {
+  overflow: hidden;
+}
+
+.item1-collection-cover:hover .item1-collection {
+  transform: scale(1.1);
+}
+.item2-collection {
+  transition: all 0.6s ease-in-out;
+}
+
+.item2-collection-cover:hover .item2-collection {
+  transform: scale(1.1);
+}
+.item3-collection {
+  transition: all 0.6s ease-in-out;
+}
+
+.item3-collection-cover:hover .item3-collection {
+  transform: scale(1.1);
+}
+.item4-collection {
+  transition: all 0.6s ease-in-out;
+}
+
+.item4-collection-cover:hover .item4-collection {
+  transform: scale(1.1);
+}

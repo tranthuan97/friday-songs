@@ -6,16 +6,43 @@
   text-align: center;
 }
 
-.header-product{
+.header-product {
   font-weight: 600;
 }
 
 .header-item {
   color: gray;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.header-item::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: -0.25em;
+  right: -0.25em;
+  background-color: rgba(106, 243, 243, 0.5);
+  transform-origin: center right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.header-item:hover::before {
+  transform: scaleX(1);
+  transform-origin: center left;
+}
+
+.header-item:hover {
+  color: black;
 }
 
 @media only screen and (max-width: 900px) {
-  .header-dropdown{
+  .header-dropdown {
     width: 770px;
   }
 }
