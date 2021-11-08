@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Button } from 'antd';
 import './styles.scss';
 
-const SectionCard = ({ img, type, name, price, discount, style, className }) => {
+const SectionCard = ({ img, type, name, price, discount, style, size, className }) => {
 
   const [changeImg, setChangeImg] = React.useState(false);
 
@@ -40,6 +40,10 @@ const SectionCard = ({ img, type, name, price, discount, style, className }) => 
             {type}
           </Button>
         }
+        {size &&
+          <div className="section-cart_size">{size}</div>
+        }
+        <div className="img-cover_background"></div>
       </div>
       <p><b>{name}</b></p>
       <span style={{ color: 'gray', marginRight: 5 }}>

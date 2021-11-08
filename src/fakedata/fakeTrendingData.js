@@ -10,6 +10,7 @@ const fakeTrendingData = [
     actionImg: '',
     discount: '',
     type: 'New',
+    size: 'X, XL, XXL'
   },
   {
     id: 2,

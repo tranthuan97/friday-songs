@@ -22,6 +22,7 @@ const Section = ({ title, subTitle, style, className, items }) => {
                 price={item.price}
                 discount={item.discount}
                 type={item.type}
+                size={item.size}
               />
             </div>
           })
