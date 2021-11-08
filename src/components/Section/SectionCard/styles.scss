@@ -1,0 +1,89 @@
+.img-cover img {
+  transition: all 1s ease-in-out;
+  cursor: pointer;
+}
+
+.img-cover {
+  position: relative;
+  overflow: hidden;
+  overflow-y: hidden;
+}
+
+.img-cover_selection {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease-in-out;
+  transform: translate(-50%, -50%);
+}
+
+.img-cover:hover .img-cover_selection {
+  visibility: visible;
+  opacity: 1;
+  top: 50%;
+}
+
+.selector {
+  font-weight: 600;
+  border-radius: 20px;
+  margin: 10px 0px;
+  text-align: center;
+  background: white;
+}
+
+.quick-view {
+  overflow: hidden;
+  width: 150px;
+  height: 35px;
+  border-radius: 20px;
+  transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    .item-text {
+    transition: all 0.2s ease-in-out;
+    margin: 6px 0px;
+  }
+  .item-icon {
+    margin: 10px 0px;
+    color: white;
+  }
+}
+.quick-view:hover {
+  background: black;
+}
+
+.quick-view:hover .item-text {
+  margin-top: -25px !important;
+}
+
+.add-to-cart {
+  overflow: hidden;
+  width: 150px;
+  height: 35px;
+  border-radius: 20px;
+  transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    .item-text {
+    transition: all 0.2s ease-in-out;
+    margin: 6px 0px;
+  }
+  .item-icon {
+    margin: 10px 0px;
+    color: white;
+  }
+}
+.add-to-cart:hover {
+  background: black;
+}
+
+.add-to-cart:hover .item-text {
+  margin-top: -25px !important;
+}
+
+.section-card:hover {
+  img {
+    transform: scale(1.2);
+  }
+}
