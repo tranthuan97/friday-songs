@@ -9,7 +9,7 @@ const Collections = ({ style, className }) => {
         <img
           className="item1-collection"
           style={{ width: '100%', height:'100%' }}
-          src="https://cdn.shopify.com/s/files/1/0332/6420/5963/files/young-beautiful-woman-looking-trendy-girl-casual-summer-clothes-positive-funny-model-winking_1080x.jpg?v=1606209527"
+          src={require('assets/image/young-beautiful-woman-looking-trendy-girl-casual-summer-clothes-positive-funny-model-winking_1080x.jpg').default}
           alt="women" />
         <div className="d-flex justify-content-center align-items-center" style={{ fontWeight: 600, boxShadow: '1px 1px gray', background: 'white', width: 80, height: 40, position: 'absolute', bottom: 0, left: '50%', transform: 'translate(-50%, -50%)' }}>
           Women
@@ -21,7 +21,7 @@ const Collections = ({ style, className }) => {
             <img
               className="item2-collection"
               style={{ height: '100%' }}
-              src="https://cdn.shopify.com/s/files/1/0332/6420/5963/files/bag2_540x.jpg?v=1581730050"
+              src={require('assets/image/bag2_540x.jpg').default}
               alt="acessories" />
             <div className="d-flex justify-content-center align-items-center" style={{ fontWeight: 600, boxShadow: '1px 1px gray', background: 'white', paddingInline: 10, height: 40, position: 'absolute', bottom: 0, left: '50%', transform: 'translate(-50%, -50%)' }}>
               Accessories
@@ -31,7 +31,7 @@ const Collections = ({ style, className }) => {
             <img
               className="item3-collection"
               style={{ height: '100%', width: '100%' }}
-              src="https://cdn.shopify.com/s/files/1/0332/6420/5963/files/lemai3020112688_m4_2-0_540x.jpg?v=1606229788"
+              src={require('assets/image/lemai3020112688_m4_2-0_540x.jpg').default}
               alt="acessories" />
             <div className="d-flex justify-content-center align-items-center" style={{ fontWeight: 600, boxShadow: '1px 1px gray', background: 'white', width: 80, height: 40, position: 'absolute', bottom: 0, left: '50%', transform: 'translate(-50%, -50%)' }}>
               Footwear
@@ -42,7 +42,7 @@ const Collections = ({ style, className }) => {
           <img
             className="item4-collection"
             style={{ height: '100%', width: '100%' }}
-            src="https://cdn.shopify.com/s/files/1/0332/6420/5963/files/p24-21_540x.jpg?v=1581731327"
+            src={require('assets/image/p24-21_540x.jpg').default}
             alt="acessories" />
           <div className="d-flex justify-content-center align-items-center" style={{ fontWeight: 600, boxShadow: '1px 1px gray', background: 'white', width: 80, height: 40, position: 'absolute', bottom: 0, left: '50%', transform: 'translate(-50%, -50%)' }}>
             Watches

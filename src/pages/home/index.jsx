@@ -11,6 +11,7 @@ import FooterComponent from '../../components/Footer';
 import IGSlider from '../../modules/home/components/IGSlider';
 
 const Home = props => {
+
   return (
     <div>
       <Affix offsetTop={0}>

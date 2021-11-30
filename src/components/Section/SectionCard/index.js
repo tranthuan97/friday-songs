@@ -13,7 +13,7 @@ const SectionCard = ({ img, type, name, price, discount, style, size, className 
       onMouseLeave={() => setChangeImg(false)}
       style={style} className={`${className} section-card`}>
       <div className="img-cover mb-2">
-        <img loading="lazy" src={img[changeImg ? img.length > 1 ? 1 : 0 : 0]} alt="img" />
+        <img width="255" height="325" loading="lazy" src={img[changeImg ? img.length > 1 ? 1 : 0 : 0]} alt="img" />
         <div className="img-cover_selection">
           <div className="selector">
             <div className="quick-view">
@@ -24,7 +24,7 @@ const SectionCard = ({ img, type, name, price, discount, style, size, className 
           <div className="selector">
             <div className="add-to-cart">
               <div className="item-text" >Add To Cart</div>
-              <div className="item-icon"><i className="fa fa-eye" aria-hidden="true"></i></div>
+              <div className="item-icon"><i className="fa fa-shopping-cart" aria-hidden="true"></i></div>
             </div>
           </div>
         </div>
@@ -41,7 +41,9 @@ const SectionCard = ({ img, type, name, price, discount, style, size, className 
           </Button>
         }
         {size &&
-          <div className="section-cart_size">{size}</div>
+          <div className="section-cart_size">{size.map((item, index) => {
+            return <span key={item.id}>{`${item.sizeName}${index < size.length - 1 ? ', ' : ''}`} </span>
+          })}</div>
         }
         <div className="img-cover_background"></div>
       </div>
