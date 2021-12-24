@@ -1,0 +1,55 @@
+.modal {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  transition: 0.3s all;
+}
+
+.background {
+  background: black;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.8
+}
+
+.content {
+  position: absolute;
+  width: 80vw;
+  height: 80vh;
+  top: 50%;
+  left: 50%;
+  color: red;
+  background: white;
+  transform: translate(-50%, -50%);
+}
+
+.contentLeft {
+  animation-name: slideLeft;
+  animation-duration: 0.2s;
+}
+
+@keyframes slideLeft {
+  0% {
+    left: 0%;
+  }
+
+  100% {
+    left: 50%;
+  }
+}
+
+.contentRight {
+  animation-name: slideRight;
+  animation-duration: 0.2s;
+}
+
+@keyframes slideRight {
+  0% {
+    left: 50%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}

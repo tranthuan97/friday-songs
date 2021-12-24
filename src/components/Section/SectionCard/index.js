@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import { Button } from 'antd';
 import './styles.scss';
 
-const SectionCard = ({ img, type, name, price, discount, style, size, className }) => {
+const SectionCard = ({ img, type, name, price, discount, style, size, className, onOpenModal }) => {
 
   const [changeImg, setChangeImg] = React.useState(false);
+ 
 
   return (
     <div
@@ -13,9 +14,9 @@ const SectionCard = ({ img, type, name, price, discount, style, size, className 
       onMouseLeave={() => setChangeImg(false)}
       style={style} className={`${className} section-card`}>
       <div className="img-cover mb-2">
-        <img width="255" height="325" loading="lazy" src={img[changeImg ? img.length > 1 ? 1 : 0 : 0]} alt="img" />
+        <img style={{ width: '100%', height: '100%' }} loading="lazy" src={img[changeImg ? img.length > 1 ? 1 : 0 : 0]} alt="img" />
         <div className="img-cover_selection">
-          <div className="selector">
+          <div className="selector" onClick={onOpenModal}>
             <div className="quick-view">
               <div className="item-text">Quick View</div>
               <div className="item-icon"><i className="fa fa-eye" aria-hidden="true"></i></div>
@@ -52,6 +53,7 @@ const SectionCard = ({ img, type, name, price, discount, style, size, className 
         {discount ? <del>{price}</del> : price}
       </span>
       <span style={{ color: 'red' }}>{discount}</span>
+      
     </div>
   );
 };

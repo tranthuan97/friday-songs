@@ -1,9 +1,21 @@
+import QuickViewModal from 'components/modal/QuickViewModal';
 import React from 'react';
 // import PropTypes from 'prop-types';
 import SectionCard from './SectionCard';
 
 
 const Section = ({ title, subTitle, style, className, items }) => {
+
+  const [modalVisible, setModalVisible] = React.useState(false);
+
+  const onCancel = () => {
+    setModalVisible(false);
+  }
+
+  const onOpen = () => {
+    setModalVisible(true);
+  }
+
   return (
     <div style={style} className={className}>
       <div className="mb-4">
@@ -17,6 +29,7 @@ const Section = ({ title, subTitle, style, className, items }) => {
           items.map(item => {
             return <div key={item.id} className="col-6 col-md-3 mb-4">
               <SectionCard
+                onOpenModal={onOpen}
                 img={item.img}
                 name={item.name}
                 price={item.price}
@@ -28,6 +41,7 @@ const Section = ({ title, subTitle, style, className, items }) => {
           })
         }
       </div>
+      <QuickViewModal visible={modalVisible} onCancel={onCancel}/>
     </div>
   );
 };
