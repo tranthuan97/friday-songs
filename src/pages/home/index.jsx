@@ -5,7 +5,7 @@ import Collections from '../../components/Collections';
 import Section from '../../components/Section';
 import fakeTrendingData from '../../fakedata/fakeTrendingData';
 import fakeBestSellerData from '../../fakedata/fakeBestSellerData';
-import IGSlider from '../../modules/home/components/IGSlider';
+import IGSlider from '../../modules/Home/components/IGSlider';
 
 const Home = props => {
 

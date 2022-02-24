@@ -13,7 +13,9 @@
   opacity: 0.8
 }
 
-.content {
+.body {
+  display: flex;
+  flex: 1;
   position: absolute;
   width: 80vw;
   height: 80vh;
@@ -24,9 +26,23 @@
   transform: translate(-50%, -50%);
 }
 
-.contentLeft {
+.bodySlideLeft {
   animation-name: slideLeft;
-  animation-duration: 0.2s;
+  animation-duration: 1s;
+}
+
+
+.bodyLeft {
+  flex: 1;
+  width: 50%;
+}
+
+.bodyRight {
+  flex: 1;
+}
+
+.bodyRight_Content {
+  padding: 30px;
 }
 
 @keyframes slideLeft {
@@ -39,9 +55,9 @@
   }
 }
 
-.contentRight {
+.bodySlideRight {
   animation-name: slideRight;
-  animation-duration: 0.2s;
+  animation-duration: 1s;
 }
 
 @keyframes slideRight {
