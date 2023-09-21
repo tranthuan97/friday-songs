@@ -34,7 +34,8 @@
     "require-directory": "^2.1.1",
     "require-main-filename": "^2.0.0",
     "slick-carousel": "^1.8.1",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^1.0.1",
+    "yarn": "^1.22.19"
   },
   "scripts": {
     "start": "craco start",
