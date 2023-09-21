@@ -1,14 +1,18 @@
 // import './App.css';
-import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom'
-import Auth from './layouts/Auth';
-import Admin from './layouts/Admin';
-import CommonLayout from './layouts/Common';
-import FooterComponent from 'components/Footer';
-import { Affix } from 'antd';
-import Header from 'components/Header';
+import {
+  BrowserRouter as Router,
+  Redirect,
+  Route,
+  Switch,
+} from "react-router-dom";
+import Auth from "./layouts/Auth";
+import Admin from "./layouts/Admin";
+import CommonLayout from "./layouts/Common";
+import FooterComponent from "components/Footer";
+import { Affix } from "antd";
+import Header from "./components/header";
 
 function App() {
-
   return (
     <Router>
       <Affix offsetTop={0}>
